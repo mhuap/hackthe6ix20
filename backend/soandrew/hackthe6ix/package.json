@@ -1,0 +1,8 @@
+{
+  "name": "hackthe6ix",
+  "author": "soandrew <andrew_so@hotmail.ca>",
+  "publish": false,
+  "dependencies": {
+    "lib": "latest"
+  }
+}
