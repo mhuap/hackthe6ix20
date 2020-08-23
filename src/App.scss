@@ -1,0 +1,123 @@
+$padding-app: 16px;
+$border-radius: 8px;
+$round-padding: 8px 12px;
+$minicard-size: 120px;
+$border-color: #E8E8E8;
+$color-bg: #F2F3F7;
+$color-green: #048272;
+$color-black: #262525;
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 12px;
+  margin-top: 64px;
+}
+
+h3 {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin-top: 32px;
+}
+
+.App > * {
+  padding: $padding-app;
+}
+
+header {
+  background-color: $color-bg;
+
+  input {
+    display: block;
+    border: 1px $border-color solid;
+    padding: $round-padding;
+    width: 100%;
+    border-radius: $border-radius;
+    background-color: white;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+
+    &:focus {
+      outline: 0;
+      border: 1px $color-green solid;
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 0 $padding-app;
+  position: relative;
+  left: -$padding-app;
+  margin: 0;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    flex: 0 0 $padding-app;
+  }
+}
+
+.tagList {
+  margin-top: 16px;
+
+  li {
+    display: inline-block;
+    font-weight: 500;
+    margin-left: 10px;
+    flex: 0 0 auto;
+
+    a {
+      display: inline-block;
+      border-radius: $border-radius;
+      background-color: $color-green;
+      padding: $round-padding;
+      text-decoration: none;
+      color: white;
+    }
+
+    a:visited {
+      color: white;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+  }
+}
+
+
+.cardList {
+  li {
+    display: inline-block;
+    width: $minicard-size;
+    margin-left: 10px;
+    flex: 0 0 auto;
+
+    a {
+      display: block;
+    }
+
+    img {
+      object-fit: cover;
+      display: inline-block;
+      width: 100%;
+      height: $minicard-size;
+      margin-bottom: 4px;
+      border-radius: $border-radius;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
